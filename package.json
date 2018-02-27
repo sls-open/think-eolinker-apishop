@@ -1,0 +1,18 @@
+{
+  "name": "think-eolinker-apishop",
+  "version": "1.0.0",
+  "description": "eolinker-apishop-by-thinkjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:sls-open/think-eolinker-apishop.git"
+  },
+  "keywords": [
+    "think-eolinker-apishop"
+  ],
+  "author": "sailengsi",
+  "license": "ISC"
+}
