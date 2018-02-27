@@ -20,6 +20,8 @@ module.exports = function (type, data = {}) {
         throw Error(`没有找到 ${type} 相关的接口，请联系作者或自己添加pull request`);
     }
 
+    const config = configs[type];
+
     // 请求接口并返回响应信息
     return request.get(`${api.host}${config.path}`).query(Object.assign({
         apiKey: api.apiKey
