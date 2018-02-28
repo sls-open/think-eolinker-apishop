@@ -1,7 +1,10 @@
 # think-eolinker-apishop
-基于thinkJS的eolinker的官方商店API拓展。
 
-此拓展依赖**superagent**
+基于ThinkJS3+的eolinker的官方商店API拓展。
+
+[EolinkerApiShop官方地址](https://www.apishop.net)
+
+此拓展依赖**[superagent](https://github.com/visionmedia/superagent)**
 
 ### 安装
 
@@ -12,7 +15,7 @@ cnpm install think-eolinker-apishop --save
 
 ### 启用
 
-`src/config/extend.js` or `src/config/moduleName/extend.js`
+`src/config/extend.js` or `src/common/config/extend.js`
 
 ```js
 const eolink = require('think-eolinker-apishop');
@@ -23,7 +26,7 @@ module.exports = [
 
 
 ### 配置eolinker官方apiKey
-`src/config/config.js` or `src/config/moduleName/config.js`,因为apiKey为私密信息，一般都是在环境变量配置文件里，自行调整
+`src/config/config.js` or `src/common/config/config.js`,因为apiKey为私密信息，一般都是在环境变量配置文件里，自行调整
 ```js
 module.exports = {
     eolinker: {
@@ -35,7 +38,7 @@ module.exports = {
 ```
 
 ### 使用
-`src/controller/控制器.js` or `src/controller/moduleName/控制器.js`
+`src/controller/控制器.js` or `src/moduleName/controller/控制器.js`
 ```js
 async indexAction() {
     const resData = await this.eoApi('Get24Jieqi');
@@ -149,3 +152,7 @@ type的值是有规律的，一般都为接口的path后面的最后一个单词
 #### opts
 
 此值为一个对象，对象的属性就是eolinker官方API接口中的参数，看官方文档即可。
+
+### 返回参数
+
+由于这是第三方API集成，返回参数自然来自第三方，自行查看eolinker的apishop官方文档即可。
